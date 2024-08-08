@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.gallery::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.gallery div {
+    display: flex;
+    padding: 10px;
+    gap: 25px;
+    flex: none;
+}
+
+.gallery div img {
+    width: 300px;
+    filter: grayscale(100%);
+    transform: 0.5s;
+}
+#backBtn, #nextBtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+.gallery div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#nextBtn:hover{
+    transform: scale(1.1);
+}
+#backBtn:hover{
+    transform: scale(1.1);
+}
